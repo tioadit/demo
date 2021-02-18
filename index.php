@@ -5,6 +5,10 @@
 </head>
 <body>
 
+<?php 
+include 'koneksi.php'
+?>
+
 	<form action="" method="post">
 		<h2>Tambah Data</h2>
 		<label>NAMA</label>
