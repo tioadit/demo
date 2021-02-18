@@ -5,11 +5,11 @@ include 'koneksi.php';
 $nama = $_POST['nama'];
 $nim = $_POST['nim'];
 
-$sql = INSERT INTO mahasiswa(nama, nim) VALUE($nama, $nim);
+$sql = "INSERT INTO mahasiswa(nama, nim) VALUES ('$nama', '$nim')";
 
-$result = pg_query($link, $sql)
+$result = pg_query($link, $sql);
 if($result){
-    echo "data Berhasil ditambahkan";
+    echo "Data Berhasil ditambahkan";
 }
 
 ?>
