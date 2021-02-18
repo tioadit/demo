@@ -1,16 +1,20 @@
-<?php 
+<?php
 
-	$host = "192.168.106.150";
-    $port = "5432";
-    $dbname = "skripsi";
-    $user = "skripsi";
-    $password = "skripsi"; 
-    $connection_string = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password} ";
-    $dbconn = pg_connect($connection_string);     
-    if ($dbconn) {
-    	 echo "Koneksi Berhasil";
-    }else{
-    	echo "Koneksi Gagal";
-    }
+// konfigurasi koneksi
+$host       =  "localhost";
+$dbuser     =  "skripsi";
+$dbpass     =  "skripsi";
+$port       =  "5432";
+ $dbname    =  "skripsi";
 
- ?>
+// script koneksi php postgree
+$link = new PDO("pgsql:dbname=$dbname;host=$host", $dbuser, $dbpass); 
+ 
+if($link)
+{
+    echo "Koneksi Berhasil";
+}else
+{
+    echo "Gagal melakukan Koneksi";
+}
+?>
