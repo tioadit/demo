@@ -6,7 +6,7 @@
 <body>
 
 <?php 
-include 'koneksi.php'
+include 'koneksi.php';
 ?>
 
 	<form action="" method="post">
